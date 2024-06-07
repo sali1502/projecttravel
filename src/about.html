@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resetipset</title>
+    <link rel="stylesheet" href="css/main.scss">
+</head>
+
+<body>
+    <div class="grid-container">
+        <header>
+            
+            <picture>
+                <source srcset="./images/logo.png?as=webp&width=183" type="image/png">
+                <img src="./images/logo.png?width=183" alt="Logotyp" class="logo">
+            </picture>
+
+            <div class="navigation"></div>
+            <button class="menu-btn open" id="open-menu">
+                <span class="menu-icon">
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                </span>
+                <span class="menu-text">Meny</span>
+            </button>
+
+            <nav id="nav-menu">
+                <button class="menu-btn close" id="close-menu">
+                    <span class="menu-icon">
+                        <span class="bars cross1"></span>
+                        <span class="bars cross2"></span>
+                    </span>
+                    <span class="menu-text">Stäng</span>
+                </button>
+                <ul>
+                    <li><a href="index.html"><strong>Startsidan</strong></a></li>
+                    <li><a href="info.html"><strong>Veckans restips</strong></a></li>
+                    <li><a href="weather.html"><strong>Väderprognos</strong></a></li>
+                    <li><a href="about.html"><strong>Om oss</strong></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+
+            <h1>Om oss</h1>
+
+            <p>Vi på restipset älskar att resa och vill gärna dela med oss av våra bästa äventyr.
+                Varje söndag publiceras ett nytt resmål som vi själva besökt och som vi varmt rekommenderar.
+                Vi hoppas att webbplatsen kan inspirera till nyfikenhet på nya spännande resmål. 
+                
+                
+                <!-- Datan som presenteras på webbplasen kommer från Open streetmaps apier.
+                Vädertjänsten kommer från tommorow.io och kartan är hämtad från Leaflet. 
+                Foto: Björn Sneiders och  Eric Welch från Unsplash samt Engin Akyurt från Pexels.</p> -->
+
+
+                <div class="space"></div>
+
+            <div class="image-container">
+                <picture>
+                    <source srcset="./images/beach.jpg?as=webp&width=1512" type="image/webp">
+                    <img src="./images/beach.jpg?width=1512" alt="En strand i soluppgång med vass i förgrunden">
+                </picture>
+        </main>
+
+        <footer>
+            <p>Kontakta oss: sali1502@student.miun.se<br>
+                &copy;&nbsp;Restipset 2024
+            </p>
+        </footer>
+
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

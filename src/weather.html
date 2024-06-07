@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resetipset</title>
+    <link rel="stylesheet" href="css/main.scss">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+
+<body>
+    <div class="grid-container">
+        <header>
+            
+            <picture>
+                <source srcset="./images/logo.png?as=webp&width=183" type="image/png">
+                <img src="./images/logo.png?width=183" alt="Logotyp" class="logo">
+            </picture>
+
+            <div class="navigation"></div>
+            <button class="menu-btn open" id="open-menu">
+                <span class="menu-icon">
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                </span>
+                <span class="menu-text">Meny</span>
+            </button>
+
+            <nav id="nav-menu">
+                <button class="menu-btn close" id="close-menu">
+                    <span class="menu-icon">
+                        <span class="bars cross1"></span>
+                        <span class="bars cross2"></span>
+                    </span>
+                    <span class="menu-text">Stäng</span>
+                </button>
+                <ul>
+                    <li><a href="index.html"><strong>Startsidan</strong></a></li>
+                    <li><a href="info.html"><strong>Veckans restips</strong></a></li>
+                    <li><a href="weather.html"><strong>Väderprognos</strong></a></li>
+                    <li><a href="about.html"><strong>Om oss</strong></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+
+            <div class="image-container">
+                <picture>
+                    <source srcset="./images/kite.jpg?as=webp&width=1512" type="image/webp">
+                    <img src="./images/kite.jpg?width=1512" alt="En skärmflygare svävar bland moln">
+                </picture>
+
+                <h1>Väderprognos</h1>
+                <p>Text utskriven från API</p>
+        </main>
+
+        <footer>
+            <p>Kontakta oss: sali1502@student.miun.se<br>
+                &copy;&nbsp;Restipset 2024
+            </p>
+        </footer>
+
+    </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+@use 'base';
+
+@keyframes colorChangeHover {
+
+    0% {
+        background-color: base.$light-blue;
+    }
+
+    5% {
+        transform: rotate(5deg);
+    }
+
+    10% { 
+        transform: rotate(-5deg);
+    }
+
+    15% {
+        transform: rotate(5deg);
+    }
+
+    20% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        background-color: base.$primary-blue;
+    }
+
+    100% {
+        background-color: base.$dark-blue;
+    }
+}
+
+@keyframes colorChangeStill {
+
+    0% {
+        background-color: base.$light-blue;
+    }
+
+    50% {
+        background-color: base.$primary-blue;
+    }
+
+    100% {
+        background-color: base.$dark-blue;
+    }
+}
+
+
