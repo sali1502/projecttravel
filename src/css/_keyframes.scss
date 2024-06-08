@@ -1,6 +1,6 @@
 @use 'base';
 
-@keyframes colorChangeStill {
+@keyframes colorChangeBar {
 
     0% {
         background-color: base.$light-blue;
@@ -16,7 +16,7 @@
 }
 
 
-@keyframes colorChangeMoveHover {
+@keyframes btnHover {
 
     0% {
         background-color: base.$light-blue;
@@ -47,5 +47,9 @@
     }
 }
 
+@keyframes imgAnimation {
+    from {margin-left: 100%;}
+    to {margin-left: 0%;}
+}
 
 
