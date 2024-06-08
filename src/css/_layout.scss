@@ -242,31 +242,27 @@ footer p {
 }
 
 // Animering - element som ändrar färg
-.backgroundTransition {
-    width: 150px;
-    height: 50px;
+.bgColorTrans {
+    width: 100%;
+    max-width: 1512px;
+    height: 1vh;
     background-color: base.$light-blue;
-    border-radius: 50;
     margin: 0 auto 0 auto;
-    text-align: center;
-    padding-top: 2vh;
-    animation: colorChangeStill 6s 2s infinite alternate both ease-out;
+    animation: colorChangeStill 10s 2s infinite alternate both ease-out;
 }
-
 
 // Animering - element som ändrar färg och rör sig vid hoover
-.backgroundTransitionHover {
-    width: 150px;
-    height: 50px;
+.btnMoveHover {
+    width: 80px;
+    height: 20px;
     background-color: base.$light-blue;
-    border-radius: 50;
+    border-radius: 30;
     margin: 0 auto 0 auto;
     text-align: center;
-    padding-top: 2vh;
 }
 
-.backgroundTransitionHover:hover {
-    animation: colorChangeHover 2s 0s infinite both ease-out;
+.btnMoveHover:hover {
+    animation: colorChangeMoveHover 2s 0s infinite both ease-out;
 }
 
 #map {
@@ -396,15 +392,16 @@ img {
 
     // Karta för mindre skärm
     #searchInput {
-        margin-top: 30vh;
+        margin-bottom: 2vh;
     }
 
     #searchBtn {
-        margin-top: 30vh;
+        margin-bottom: 2vh;
     }
 
     #map {
-        height: 400px;
+        height: 450px;
+        width: 100%;
     }
 
     p {

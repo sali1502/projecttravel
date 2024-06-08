@@ -1,6 +1,22 @@
 @use 'base';
 
-@keyframes colorChangeHover {
+@keyframes colorChangeStill {
+
+    0% {
+        background-color: base.$light-blue;
+    }
+
+    50% {
+        background-color: base.$primary-blue;
+    }
+
+    100% {
+        background-color: base.$dark-blue;
+    }
+}
+
+
+@keyframes colorChangeMoveHover {
 
     0% {
         background-color: base.$light-blue;
@@ -31,19 +47,5 @@
     }
 }
 
-@keyframes colorChangeStill {
-
-    0% {
-        background-color: base.$light-blue;
-    }
-
-    50% {
-        background-color: base.$primary-blue;
-    }
-
-    100% {
-        background-color: base.$dark-blue;
-    }
-}
 
 
