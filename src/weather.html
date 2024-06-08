@@ -4,11 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resetipset</title>
+    <title>Restipset</title>
     <link rel="stylesheet" href="css/main.scss">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <link rel="stylesheet" href="css/main.scss">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <link rel="stylesheet" href="css/main.scss">
+    <script src="https://kit.fontawesome.com/89fb6a41df.js" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
 <body>
     <div class="grid-container">
         <header>
@@ -58,18 +64,18 @@
                 <h1>Väderprognos</h1>
 
                 <div class="text-container">
-                        <div>
-                          <input type="text" id="searchInput" placeholder="Skriv din destination här">
-                          <button id="searchBtn" class="btnMoveHover">Sök</button>
-                        </div>
-                  
-                        <div class="space"></div>
-                  
-                        <div id="weather"></div>
-                  
-                        <div class="space"></div>
-                  
-                        <div id="map"></div>
+                    <div>
+                        <input type="text" id="searchInput" placeholder="Skriv din destination här">
+                        <button id="searchBtn" class="btnMoveHover">Sök</button>
+                    </div>
+
+                    <div class="space"></div>
+
+                    <div id="weather"></div>
+
+                    <div class="space"></div>
+
+                    <div id="map"></div>
                 </div>
         </main>
 
@@ -78,13 +84,12 @@
         <footer>
 
             <div class="text-container">
-                <p>Kontakta oss: sali1502@student.miun.se<br>
+                <p><i class="fa-regular fa-envelope"></i>&nbsp;<a href=mailto:"sali1502@student.miun.se">Kontakta oss via e-post</a><br>
                     &copy;&nbsp;Restipset 2024</p>
             </div>
         </footer>
 
     </div>
-    <script src="https://kit.fontawesome.com/af592b68c5.js" crossorigin=""></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script type="module" src="js/main.js"></script>
 </body>
