@@ -177,12 +177,15 @@ h2 {
 }
 
 p {
+    display: block;
+    justify-content: center;
     margin: 0 auto 0 auto;
     font-size: 1em;
     line-height: 1.8em;
     text-align: center;
+    padding-bottom: 2vh;
     color: base.$primary-text;
-    max-width: 550px;
+    max-width: 750px;
 }
 
 ul {
@@ -195,14 +198,14 @@ ul {
 }
 
 .text-container {
+    display: block;
+    justify-content: center;
     margin: 0 auto 0 auto;
-    text-align: left;
+    text-align: center;
     font-size: 1em;
     line-height: 1.8em;
     color: base.$primary-text;
-    padding-bottom: 2vh;
     max-width: 750px;
-    width: 100%;
 }
 
 footer {
@@ -210,10 +213,9 @@ footer {
     line-height: 2em;
     height: auto;
     background-color: base.$light-blue;
-    margin-top: 4vh;
     position: relative;
-    padding-right: 10vw;
-    padding-left: 10vw;
+    padding-right: 5vw;
+    padding-left: 5vw;
     padding-top: 2vh;
     padding-bottom: 2vh;
     width: 100%;
@@ -278,8 +280,28 @@ img {
 }
 
 .space {
-    height: 5vh;
+    height: 2vh;
 }
+
+#searchInput {
+    margin: 0 auto 0 auto;
+  }
+  
+  #searchBtn {
+    @extend #searchInput;
+  }
+  
+  #weather {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    text-align: center;
+  }
+  
+  #map {
+    height: 450px;
+    width: 100%;
+  }
 /* Media querys */
 
 /* dark mode */
@@ -299,11 +321,6 @@ img {
 
     .text {
         color: base.$primary-text-darkm !important;
-    }
-    
-    p { 
-        margin-left: 5vw;
-        margin-right: 5vw;
     }
 }
 
@@ -344,7 +361,7 @@ img {
         padding: 1.2em 0;
     }
 
-    p { 
+    p {
         margin-left: 5vw;
         margin-right: 5vw;
     }
@@ -359,8 +376,8 @@ img {
         justify-content: center;
         margin: 0 auto 0 auto;
         text-align: center;
-        padding-left: 10vw;
-        padding-right: 10vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
         font-size: 1em;
         line-height: 1.8em;
         color: base.$primary-text;
@@ -390,7 +407,7 @@ img {
         height: 400px;
     }
 
-    p { 
+    p {
         margin-left: 5vw;
         margin-right: 5vw;
     }

@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resetipset</title>
     <link rel="stylesheet" href="css/main.scss">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-</head>
-
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="css/main.scss">
 <body>
     <div class="grid-container">
         <header>
-            
+
             <picture>
                 <source srcset="./images/logo.png?as=webp&width=183" type="image/png">
                 <img src="./images/logo.png?width=183" alt="Logotyp" class="logo">
@@ -54,16 +54,35 @@
                 </picture>
 
                 <h1>Väderprognos</h1>
-                <p>Text utskriven från API</p>
+
+                <div class="text-container">
+                        <div>
+                          <input type="text" id="searchInput" placeholder="Skriv din destination här">
+                          <button id="searchBtn">Search</button>
+                        </div>
+                  
+                        <div class="space"></div>
+                  
+                        <div id="weather"></div>
+                  
+                        <div class="space"></div>
+                  
+                        <div id="map"></div>
+                </div>
         </main>
 
+        <div class="space"></div>
+
         <footer>
-            <p>Kontakta oss: sali1502@student.miun.se<br>
-                &copy;&nbsp;Restipset 2024
-            </p>
+
+            <div class="text-container">
+                <p>Kontakta oss: sali1502@student.miun.se<br>
+                    &copy;&nbsp;Restipset 2024</p>
+            </div>
         </footer>
 
     </div>
+    <script src="https://kit.fontawesome.com/af592b68c5.js" crossorigin="*"></script>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script type="module" src="js/main.js"></script>
 </body>
