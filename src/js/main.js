@@ -27,7 +27,6 @@ function toggleMenu() {
     }
 }
 
-
 /* Karta med väderprognos*/
 
 // Hämta väderprognos
@@ -131,3 +130,44 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+
+
+// Hämta och skriva ut data om Skottland från API
+const url = "https://restcountries.com/v3.1/all?fields=name,capital,region,area,population";
+
+window.onload = init;
+
+async function init() {
+    try {
+        // Fetch-anrop
+        const response = await fetch(url);
+        let countries = await response.json();
+
+        // Filtrera ut Skottland
+           countries = countries.filter((country) => {
+           return country.name.common.includes("United Kingdom");
+        });
+
+        displayCountries(countries);
+    } catch {
+        document.getElementById("error").innerHTML = "<p>Något gick fel... </p>";
+    }
+}
+
+function displayCountries(countries) {
+    const countriesEl = document.getElementById("countries-list");
+
+    countries.forEach((country) => {
+        countriesEl.innerHTML += `
+        <tr>
+            <td>${country.name.common}</td>
+            <td>${country.capital}</td>
+            <td>${country.region}</td>
+            <td>${country.area}</td>
+            <td>${country.population}</td>
+      </tr>
+      `;
+    });
+}

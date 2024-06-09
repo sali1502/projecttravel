@@ -179,7 +179,7 @@ h2 {
 p {
     display: block;
     justify-content: center;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
     font-size: 1em;
     line-height: 1.8em;
     text-align: center;
@@ -309,6 +309,27 @@ img {
     height: 450px;
     width: 100%;
   }
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    font: 100% base.$font-stack;
+}
+
+table, th, td {
+    border: 0px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: base.$primary-bg;
+}
+
 /* Media querys */
 
 /* dark mode */
