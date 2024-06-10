@@ -27,7 +27,7 @@ function toggleMenu() {
     }
 }
 
-/* Karta med väderprognos*/
+/* Karta med temperaturprognos*/
 
 // Hämta väderprognos
 async function getForecast(lat, long) {
@@ -39,7 +39,7 @@ async function getForecast(lat, long) {
     }
 }
 
-// Skriv ut väderprognos från koordinater
+// Skriv temperaturprognos från koordinater
 async function writeForecast(lat, long) {
     try {
         let data = await getForecast(lat, long);
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Sök av data och flagga för valfritt land
+// Sökning av data och flagga för EU-land
 
 const url = "https://restcountries.com/v3.1/all?fields=name,capital,region,area,population";
 
@@ -162,13 +162,70 @@ async function getCountryData() {
 
 function displayCountries(countries) {
     const countriesEl = document.querySelector("#country-list tbody");
-    countriesEl.innerHTML = ""; 
+    countriesEl.innerHTML = "";
 
     countries.forEach((country) => {
-        const flagUrl = country.name.common === "United Kingdom" 
-            ? "https://flagsapi.com/GB/flat/32.png"
-            : "https://flagsapi.com/SE/flat/32.png";
-        
+        let flagUrl;
+        if (country.name.common === "United Kingdom") {
+            flagUrl = "https://flagsapi.com/GB/flat/32.png";
+        } else if (country.name.common === "Austria") {
+            flagUrl = "https://flagsapi.com/AT/flat/32.png";
+        } else if (country.name.common === "Belgium") {
+            flagUrl = "https://flagsapi.com/BE/flat/32.png";
+        } else if (country.name.common === "Bulgaria") {
+            flagUrl = "https://flagsapi.com/BG/flat/32.png";
+        } else if (country.name.common === "Croatia") {
+            flagUrl = "https://flagsapi.com/HR/flat/32.png";
+        } else if (country.name.common === "Cyprus") {
+            flagUrl = "https://flagsapi.com/CY/flat/32.png";
+        } else if (country.name.common === "Czechia") {
+            flagUrl = "https://flagsapi.com/CZ/flat/32.png";
+        } else if (country.name.common === "Denmark") {
+            flagUrl = "https://flagsapi.com/DK/flat/32.png";
+        } else if (country.name.common === "Estonia") {
+            flagUrl = "https://flagsapi.com/EE/flat/32.png";
+        } else if (country.name.common === "Finland") {
+            flagUrl = "https://flagsapi.com/FI/flat/32.png";
+        } else if (country.name.common === "France") {
+            flagUrl = "https://flagsapi.com/FR/flat/32.png";
+        } else if (country.name.common === "Germany") {
+            flagUrl = "https://flagsapi.com/DE/flat/32.png";
+        } else if (country.name.common === "Greece") {
+            flagUrl = "https://flagsapi.com/GR/flat/32.png";
+        } else if (country.name.common === "Hungary") {
+            flagUrl = "https://flagsapi.com/HU/flat/32.png";
+        } else if (country.name.common === "Ireland") {
+            flagUrl = "https://flagsapi.com/IE/flat/32.png";
+        } else if (country.name.common === "Italy") {
+            flagUrl = "https://flagsapi.com/IT/flat/32.png";
+        } else if (country.name.common === "Latvia") {
+            flagUrl = "https://flagsapi.com/LV/flat/32.png";
+        } else if (country.name.common === "Lithuania") {
+            flagUrl = "https://flagsapi.com/LT/flat/32.png";
+        } else if (country.name.common === "Luxembourg") {
+            flagUrl = "https://flagsapi.com/LU/flat/32.png";
+        } else if (country.name.common === "Malta") {
+            flagUrl = "https://flagsapi.com/MT/flat/32.png";
+        } else if (country.name.common === "Norway") {
+            flagUrl = "https://flagsapi.com/NO/flat/32.png";
+        } else if (country.name.common === "Netherlands") {
+            flagUrl = "https://flagsapi.com/NL/flat/32.png";
+        } else if (country.name.common === "Poland") {
+            flagUrl = "https://flagsapi.com/PL/flat/32.png";
+        } else if (country.name.common === "Portugal") {
+            flagUrl = "https://flagsapi.com/PT/flat/32.png";
+        } else if (country.name.common === "Romania") {
+            flagUrl = "https://flagsapi.com/RO/flat/32.png";
+        } else if (country.name.common === "Slovakia") {
+            flagUrl = "https://flagsapi.com/SK/flat/32.png";
+        } else if (country.name.common === "Spain") {
+            flagUrl = "https://flagsapi.com/ES/flat/32.png";
+        } else if (country.name.common === "Sweden") {
+            flagUrl = "https://flagsapi.com/SE/flat/32.png";
+        } else {
+            flagUrl = `https://flagsapi.com/${country.cca2}/flat/32.png`;
+        }
+
         countriesEl.innerHTML += `
         <tr>
             <td>  
