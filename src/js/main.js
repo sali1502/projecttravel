@@ -131,10 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-
-
-// Hämta och skriva ut data om Skottland från API
+// Hämta och skriva ut data om Storbritannien från API
 const url = "https://restcountries.com/v3.1/all?fields=name,capital,region,area,population";
 
 window.onload = init;
@@ -145,9 +142,9 @@ async function init() {
         const response = await fetch(url);
         let countries = await response.json();
 
-        // Filtrera ut Skottland
+        // Filtrera ut Storbritannien
            countries = countries.filter((country) => {
-           return country.name.common.includes("United Kingdom");
+           return country.name.common === ("United Kingdom");
         });
 
         displayCountries(countries);
@@ -162,6 +159,12 @@ function displayCountries(countries) {
     countries.forEach((country) => {
         countriesEl.innerHTML += `
         <tr>
+            <td>  
+                <picture>
+                    <source srcset="https://flagsapi.com/GB/flat/32.png?as=webp&width=32" type="image/webp">
+                    <img src="https://flagsapi.com/GB/flat/32.png" alt="Storbritanniens flagga" class="flag">
+                </picture>
+            </td>
             <td>${country.name.common}</td>
             <td>${country.capital}</td>
             <td>${country.region}</td>
@@ -171,3 +174,6 @@ function displayCountries(countries) {
       `;
     });
 }
+
+
+

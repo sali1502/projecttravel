@@ -311,23 +311,29 @@ img {
   }
 
 table {
-    width: 50%;
     border-collapse: collapse;
     margin: 0 auto;
     font: 100% base.$font-stack;
+    width: 40%;
 }
 
 table, th, td {
-    border: 0px solid black;
+    border: 1px solid black;
 }
 
 th, td {
-    padding: 8px;
+    padding: 5px;
     text-align: left;
+    font-size: 0.8em;
 }
 
 th {
     background-color: base.$primary-bg;
+}
+
+.flag {
+    width: 32px;
+    margin: auto;
 }
 
 /* Media querys */
