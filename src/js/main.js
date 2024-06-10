@@ -4,7 +4,7 @@ import { apikey } from "./apikey.js";
 
 /* Meny */
 
-// Hämta in meny-knapparna
+// Hämta meny-knappar
 let openBtn = document.getElementById("open-menu");
 let closeBtn = document.getElementById("close-menu");
 
@@ -12,14 +12,14 @@ let closeBtn = document.getElementById("close-menu");
 openBtn.addEventListener('click', toggleMenu);
 closeBtn.addEventListener('click', toggleMenu);
 
-// Toggla fram navigeringsmenyn
+// Toggla fram navigeringsmeny
 function toggleMenu() {
     let navMenuEl = document.getElementById("nav-menu");
 
-    // Hämta in css för menyn
+    // Hämta in css för meny
     let style = window.getComputedStyle(navMenuEl);
 
-    // Koll om navigering är synlig eller ej, ändrar display block/none
+    // Koll om navigering är synlig, ändrar display block/none
     if (style.display === "none") {
         navMenuEl.style.display = "block";
     } else {
@@ -131,38 +131,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Hämta och skriva ut data om Storbritannien från API
+
+// Sök av data och flagga för valfritt land
+
 const url = "https://restcountries.com/v3.1/all?fields=name,capital,region,area,population";
 
 window.onload = init;
 
 async function init() {
+    document.getElementById("searchBtn2").addEventListener("click", getCountryData);
+}
+
+async function getCountryData() {
     try {
-        // Fetch-anrop
         const response = await fetch(url);
         let countries = await response.json();
 
-        // Filtrera ut Storbritannien
-           countries = countries.filter((country) => {
-           return country.name.common === ("United Kingdom");
-        });
+        const countryInput = document.getElementById("searchInput2").value.trim();
+        const filteredCountry = countries.filter((country) => country.name.common.toLowerCase() === countryInput.toLowerCase());
 
-        displayCountries(countries);
+        if (filteredCountry.length > 0) {
+            displayCountries(filteredCountry);
+        } else {
+            document.getElementById("error").innerHTML = "<p>Landet hittades inte...</p>";
+        }
     } catch {
-        document.getElementById("error").innerHTML = "<p>Något gick fel... </p>";
+        document.getElementById("error").innerHTML = "<p>Något gick fel...</p>";
     }
 }
 
 function displayCountries(countries) {
-    const countriesEl = document.getElementById("countries-list");
+    const countriesEl = document.querySelector("#country-list tbody");
+    countriesEl.innerHTML = ""; 
 
     countries.forEach((country) => {
+        const flagUrl = country.name.common === "United Kingdom" 
+            ? "https://flagsapi.com/GB/flat/32.png"
+            : "https://flagsapi.com/SE/flat/32.png";
+        
         countriesEl.innerHTML += `
         <tr>
             <td>  
                 <picture>
-                    <source srcset="https://flagsapi.com/GB/flat/32.png?as=webp&width=32" type="image/webp">
-                    <img src="https://flagsapi.com/GB/flat/32.png" alt="Storbritanniens flagga" class="flag">
+                    <source srcset="${flagUrl}?as=webp&width=32" type="image/webp">
+                    <img src="${flagUrl}" alt="${country.name.common} flagga" class="flag">
                 </picture>
             </td>
             <td>${country.name.common}</td>
@@ -170,8 +182,8 @@ function displayCountries(countries) {
             <td>${country.region}</td>
             <td>${country.area}</td>
             <td>${country.population}</td>
-      </tr>
-      `;
+        </tr>
+        `;
     });
 }
 

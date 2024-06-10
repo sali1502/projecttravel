@@ -65,15 +65,11 @@
             <h2>Skottland</h2>
 
             <div class="text-container">
+                <p>Skottland tillhör Storbritannien tillsammans med England, Nordirland och Wales.
+                    Här nedan har vi samlat lite information om Storbritannien.</p>
+            </div>
 
-                <p>Skottland tillhör Storbritannien tillsammans med England, Nordirland och Wales. Här nedan har vi
-                    samlat lite data om Storbritannien.
-                </p>
-        </div>
-
-        <div class="space"></div>
-
-        <div class="table-container">
+            <div class="table-container">
                 <table>
                     <thead>
                         <tr>
@@ -95,10 +91,61 @@
                             </td>
                         </tr>
                     </thead>
-                    <tbody id="countries-list">
+                    <tbody>
+                        <td><picture>
+                            <source srcset="https://flagsapi.com/GB/flat/32.png?as=webp&width=32" type="image/webp">
+                            <img src="https://flagsapi.com/GB/flat/32.png" alt="Storbritanniens flagga" class="flag">
+                        </picture></td>
+                        <td>United Kingdom</td>
+                        <td>London</td>
+                        <td>Europe</td>
+                        <td>242900</td>
+                        <td>67215293</td>
                     </tbody>
                 </table>
             </div>
+
+            <div class="space1"></div>
+
+            <div class="text-container">
+                <p>Nyfiken på ett annat land? Sök på landets engelska namn i formuläret.</p>
+            </div>
+
+            <div class="text-container">
+                <input type="text" id="searchInput2" placeholder="Skriv in ett land här...'">
+                <button id="searchBtn2" class="btnHover">Sök</button>
+            </div>
+
+            <div class="space"></div>
+
+            <div class="table-container">
+                <table id="country-list">
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <bold>Land</bold>
+                            </td>
+                            <td>
+                                <bold>Huvudstad</bold>
+                            </td>
+                            <td>
+                                <bold>Region</bold>
+                            </td>
+                            <td>
+                                <bold>Yta i km<sup>2</sup></bold>
+                            </td>
+                            <td>
+                                <bold>Population</bold>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="space"></div>
 
             <div id="error"></div>
 

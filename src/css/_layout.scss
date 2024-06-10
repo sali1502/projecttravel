@@ -286,6 +286,10 @@ img {
     width: 100%;
 }
 
+.space1 {
+    height: 6vh;
+}
+
 .space {
     height: 2vh;
 }
@@ -295,6 +299,14 @@ img {
   }
   
   #searchBtn {
+    @extend #searchInput;
+  }
+
+  #searchInput2 {
+    margin: 0 auto 0 auto;
+  }
+  
+  #searchBtn2 {
     @extend #searchInput;
   }
   
