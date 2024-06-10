@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Sökning av data och flagga för EU-land
+// Sök av EU-land med flagga
 
 const url = "https://restcountries.com/v3.1/all?fields=name,capital,region,area,population";
 
