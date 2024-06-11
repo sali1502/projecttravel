@@ -22,6 +22,7 @@
                 <img src="./images/logo.png?width=183" alt="Logotyp" class="logo">
             </picture>
 
+            <!-- Responsiv meny -->
             <div class="navigation"></div>
             <button class="menu-btn open" id="open-menu">
                 <span class="menu-icon">
@@ -50,13 +51,14 @@
             </nav>
         </header>
 
+        <!-- Animerad linje -->
         <div class="colorChangeBar"></div>
 
         <main>
             <div class="image-container">
                 <picture>
                     <source srcset="./images/cow.jpg?as=webp&width=1512" type="image/webp">
-                    <img src="./images/cow.jpg?width=1512" alt="Skotsk höglandsboskap på en bergssluttning">
+                    <img src="./images/cow.jpg?width=1512" alt="Skotsk höglandsboskap på bergssluttning">
                 </picture>
             </div>
 
@@ -69,6 +71,7 @@
                     Här nedan har vi samlat lite information om Storbritannien.</p>
             </div>
 
+            <!-- Tabell med statisk data -->
             <div class="table-container">
                 <table>
                     <thead>
@@ -104,13 +107,17 @@
                 <p>Nyfiken på ett annat land? Sök på ett EU-lands engelska namn i formuläret nedan.</p>
             </div>
 
+            <!-- Inputfält med animerad knapp -->
             <div class="text-container">
+                <label>
                 <input type="text" id="searchInput2" placeholder="Skriv in ett land här...">
                 <button id="searchBtn2" class="btnHover">Sök</button>
+                </label>
             </div>
 
             <div class="space"></div>
 
+            <!-- Tabell med dynamisk data från två API-->
             <div class="table-container">
                 <table id="country-list">
                     <thead>

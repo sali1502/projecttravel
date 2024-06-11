@@ -133,7 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Sök av EU-land med flagga
-
 const url = "https://restcountries.com/v3.1/all?fields=name,capital,region,area,population";
 
 window.onload = init;
@@ -142,6 +141,7 @@ async function init() {
     document.getElementById("searchBtn2").addEventListener("click", getCountryData);
 }
 
+// Hämta data om länder
 async function getCountryData() {
     try {
         const response = await fetch(url);
@@ -160,6 +160,7 @@ async function getCountryData() {
     }
 }
 
+// Skriv ut data om länder tillsammans med flagga från EU-länder
 function displayCountries(countries) {
     const countriesEl = document.querySelector("#country-list tbody");
     countriesEl.innerHTML = "";
@@ -226,6 +227,8 @@ function displayCountries(countries) {
             flagUrl = `https://flagsapi.com/${country.cca2}/flat/32.png`;
         }
 
+
+        // Skriv ut data i tabell
         countriesEl.innerHTML += `
         <tr>
             <td>  
