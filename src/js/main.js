@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Sök av EU-land med flagga
-const url = "https://cors-anywhere.herokuapp.com/https://restcountries.com/v3.1/all?fields=name,capital,region,area,population";
+const url = "https://restcountries.com/v3.1/all?fields=name,capital,region,area,population";
 
 window.onload = init;
 
