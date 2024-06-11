@@ -15,7 +15,5 @@
     "@parcel/transformer-webmanifest": "^2.12.0",
     "parcel": "^2.12.0",
     "sharp": "^0.31.3"
-  },
-  "main": "index.js",
-  "description": ""
+  }
 }
