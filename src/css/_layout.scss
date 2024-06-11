@@ -351,6 +351,26 @@ th {
     margin: auto;
 }
 
+.photo {
+    font: 100% base.$font-stack;
+    font-size: 0.6em;
+    color: base.$dark-blue;
+}
+
+.plugin-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.plugin-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /* Media querys */
 
 /* dark mode */
