@@ -138,7 +138,7 @@ const url = "https://restcountries.com/v3.1/all?fields=name,capital,region,area,
 window.onload = init;
 
 async function init() {
-    document.getElementById("searchBtn2").addEventListener("click", getCountryData);
+    document.getElementById('searchBtnCountry').addEventListener('click', getCountryData);
 }
 
 // Hämta data om länder
@@ -147,7 +147,7 @@ async function getCountryData() {
         const response = await fetch(url);
         let countries = await response.json();
 
-        const countryInput = document.getElementById("searchInput2").value.trim();
+        const countryInput = document.getElementById('searchInputCountry').value.trim();
         const filteredCountry = countries.filter((country) => country.name.common.toLowerCase() === countryInput.toLowerCase());
 
         if (filteredCountry.length > 0) {
@@ -160,7 +160,7 @@ async function getCountryData() {
     }
 }
 
-// Skriv ut data om länder tillsammans med flagga från EU-länder
+// Skriv ut data om länder med flagga
 function displayCountries(countries) {
     const countriesEl = document.querySelector("#country-list tbody");
     countriesEl.innerHTML = "";
