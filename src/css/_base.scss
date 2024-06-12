@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Variabel font
 $font-stack: Verdana, sans-serif;
 
@@ -20,3 +22,22 @@ $primary-heading: $dark-blue;
 $primary-text-darkm: $white;
 $primary-bg-darkm: $grey;
 $primary-heading-darkm: $white;
+
+// If-else sats
+@mixin triangle($size, $color, $direction) {
+
+    height: 0px;
+    width: 0px;
+
+    border-color: transparent;
+    border-style: solid;
+    border-width: math.div($size, 2);
+
+    @if $direction ==up {
+        border-bottom-color: $color;
+    }
+
+    @else if $direction ==down {
+        border-top-color: $color;
+    }
+}

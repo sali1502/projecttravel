@@ -302,11 +302,11 @@ img {
     @extend #searchInput;
 }
 
-#searchInput2 {
+#searchInputCountry {
     margin: 0 auto 0 auto;
 }
 
-#searchBtn2 {
+#SearchBtnCountry {
     @extend #searchInput;
 }
 
@@ -369,6 +369,27 @@ th {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+// Mixin
+.arrow {
+    margin: 0 auto;
+    @include base.triangle (16px, base.$dark-blue, down);
+}
+
+.footer-container {
+    display: block;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.8em;
+    color: base.$primary-text;
+    max-width: 750px;
+}
+
+.footer-container p {
+    padding: 0px;
 }
 
 /* Media querys */
@@ -460,6 +481,7 @@ th {
         text-align: center;
     }
 }
+
 
 @media only screen and (max-width: 1024px) {
 
