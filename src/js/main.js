@@ -131,9 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-// Sök av EU-land med flagga
-const url = "https://restcountries.com/v3.1/all?fields=name,capital,region,area,population";
+// Sök land med flagga
+const url = "https://restcountries.com/v3.1/all?fields=name,capital,region,area,population,cca2";
 
 window.onload = init;
 
@@ -227,7 +226,6 @@ function displayCountries(countries) {
             flagUrl = `https://flagsapi.com/${country.cca2}/flat/32.png`;
         }
 
-
         // Skriv ut data i tabell
         countriesEl.innerHTML += `
         <tr>
@@ -246,6 +244,4 @@ function displayCountries(countries) {
         `;
     });
 }
-
-
 
