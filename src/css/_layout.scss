@@ -208,6 +208,10 @@ ul {
     max-width: 750px;
 }
 
+.footer-container {
+    @extend .text-container;
+}
+
 footer {
     font-size: 0.9em;
     line-height: 2em;
@@ -381,6 +385,14 @@ th {
         background-color: base.$primary-bg-darkm !important;
     }
 
+    .text-container {
+        color: base.$primary-text-darkm !important;
+    }
+
+    .text-container p {
+        color: base.$primary-text-darkm !important;
+    }
+
     body {
         background-color: base.$primary-bg-darkm !important;
     }
@@ -389,7 +401,17 @@ th {
         color: base.$primary-heading-darkm !important;
     }
 
-    .text {
+    h2 {
+        color: base.$primary-heading-darkm !important;
+    }
+
+    table,
+    th,
+    td {
+        color: base.$primary-text-darkm !important;
+    }
+
+    .photo {
         color: base.$primary-text-darkm !important;
     }
 }

@@ -226,7 +226,7 @@ function displayCountries(countries) {
             flagUrl = `https://flagsapi.com/${country.cca2}/flat/32.png`;
         }
 
-        // Skriv ut data i tabell
+        // Skriv ut data med flagga i tabell
         countriesEl.innerHTML += `
         <tr>
             <td>  
